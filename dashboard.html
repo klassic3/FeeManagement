@@ -7,13 +7,18 @@
     <title>Dashboard</title>
     <!--Global CSS-->
     <link rel="stylesheet" type="text/css" href="globalstyles.css">
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="d-flex">
 
+    <!--Navbar-->
     <nav class="navbar-nav text-white p-2 justify-content-between">
         <div>
             <div class="d-flex justify-content-between align-items-center my-2">
@@ -35,8 +40,108 @@
         </div>
     </nav>
 
-    <div class="">
-        Dashboard
+    <div class="flex-grow-1 p-2">
+
+        <!--Search Bar and Profile-->
+        <div class="d-flex align-items-center">
+            <!--Search Bar-->
+            <form class="d-flex mt-3 px-3 w-100" role="search">
+                <div class="input-group">
+                    <span class="input-group-text" id="search-icon">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                </div>
+            </form>
+            <!--Profile-->
+            <div class="d-flex justify-content-between align-items-center gap-4 mt-3 px-3">
+                <i class="bi bi-bell fs-5"></i>
+                <i class="bi bi-person-circle fs-3"></i>
+            </div>
+        </div>
+
+        <!--Dashboard-->
+        <div class="mt-3 p-2">
+            <h1>Dashboard</h1>
+            <p>Welcome back Admin, here is your overview. </p>
+
+            <!--Stat cards-->
+            <div class="d-flex justify-content-between">
+                <!--Total Paid-->
+                <div class="card w-25">
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold">Total Paid</h6>
+                        <h5 class="card-text fw-bold">Nrs. 15,000</h5>
+                        <p class="card-text fw-bold text-success"><i class="bi bi-graph-up-arrow"></i> 10% vs last
+                            month</p>
+                    </div>
+                </div>
+
+                <!--Pending-->
+                <div class="card w-25">
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold">Pending</h6>
+                        <h5 class="card-text fw-bold">Nrs. 24,000</h5>
+                        <p class="card-text fw-bold text-success"><i class="bi bi-graph-up-arrow"></i> 0% vs last
+                            month</p>
+                    </div>
+                </div>
+
+                <!--Overdue-->
+
+                <div class="card w-25">
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold">OverDue</h6>
+                        <h5 class="card-text fw-bold">Nrs. 12,000</h5>
+                        <p class="card-text fw-bold text-danger"><i class="bi bi-graph-down-arrow"></i> 10% vs last
+                            month</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <h3>Alerts</h3>
+                <table class="table">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Date</th>
+                            <th>Student</th>
+                            <th>Fee Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nov 3rd, 2025</td>
+                            <td>Student1</td>
+                            <td class="text-success">Paid</td>
+                            <td>Nrs. 2000</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 1st, 2025</td>
+                            <td>Student2</td>
+                            <td class="text-danger">Overdue</td>
+                            <td>Nrs. 1000</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 20th, 2025</td>
+                            <td>Student 3</td>
+                            <td class="text-warning">Pending</td>
+                            <td>Nrs. 4000</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 19th, 2025</td>
+                            <td>Student 4</td>
+                            <td class="text-success">Paid</td>
+                            <td>Nrs. 22000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
     </div>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
