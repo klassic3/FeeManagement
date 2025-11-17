@@ -13,6 +13,11 @@
   background-color: #4129b4 !important;
 }
 
+.btn-outline-primary {
+  border-color: #4129b4 !important;
+  color: #4129b4 !important;
+}
+
 .modalbg {
   background-color: #9c9c9c50;
 }

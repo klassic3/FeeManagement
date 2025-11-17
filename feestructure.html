@@ -88,7 +88,7 @@
                     <table class="table align-middle mb-0">
                         <thead class="table-secondary">
                             <tr>
-                                <th>Structure Name</th>
+                                <th>Fee Category</th>
                                 <th>Grade</th>
                                 <th>Amount</th>
                                 <th>Type</th>
@@ -162,16 +162,41 @@
 
     </div>
 
-<!--Modal-->
+    <!--Modal-->
     <div class="d-none position-absolute justify-content-center align-items-center modalbg w-100 h-100 " id="modal">
 
-        <form class="position-absolute d-flex flex-column align-items-center justify-content-center p-3 bg-white shadow-sm">
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                    <label for="floatingInput">Email address</label>
+        <form
+            class="position-absolute d-flex flex-column gap-3 align-items-center justify-content-center p-3 bg-white shadow-sm">
+            <legend>Add New Fee Structure</legend>
+            <select class="form-select rounded w-100">
+                <option selected disabled><i class="bi bi-plus"></i>Fee Category</option>
+                <option value="1">Tuition Fee</option>
+                <option value="2">Transportation Fee</option>
+                <option value="3">Lab Fee</option>
+            </select>
+            <div class="d-flex flex-column w-100">
+                <label>Grade</label>
+                <div class="d-flex justify-content-between gap-4">
+                    <input type="number" class="form-control">
+                    <p class="mt-2">to</p>
+                    <input type="number" class="form-control">
                 </div>
-                <button class="btn btn-primary" onclick="handleClose()">Close</button>
-            </form>
+            </div>
+            <div class="d-flex flex-column w-100">
+                <label>Amount</label>
+                <input type="number" class="form-control">
+            </div>
+            <select class="form-select rounded w-100">
+                <option selected disabled><i class="bi bi-plus"></i>Fee Type</option>
+                <option value="1">Annual</option>
+                <option value="2">Monthly</option>
+                <option value="3">One-Time</option>
+            </select>
+            <div class="d-flex justify-content-between w-100">
+                <button class="btn btn-primary" onclick="handleClose()">Submit</button>
+                <button class="btn btn-outline-primary" onclick="handleClose()">Close</button>
+            </div>
+        </form>
     </div>
 
     <script>
