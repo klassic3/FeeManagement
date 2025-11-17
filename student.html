@@ -63,7 +63,7 @@
                 <thead class="table-secondary">
                 <tr>
                     <th>Name</th>
-                    <th>Class</th>
+                    <th>Grade</th>
                     <th>Roll No.</th>
                     <th>Status</th>
                 </tr>
@@ -130,9 +130,37 @@
     <div class="d-none position-absolute justify-content-center align-items-center modalbg w-100 h-100 " id="modal">
 
         <form
-            class="position-absolute d-flex flex-column gap-3 align-items-center justify-content-center p-3 bg-white shadow-sm">
+            class="position-absolute d-flex flex-column gap-3 align-items-center justify-content-center p-3 bg-white shadow-sm w-50">
             <legend>Add New Students</legend>
+            <div class="d-flex flex-column w-100">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Enter Full Name">
+            </div>
+            <select class="form-select rounded w-100">
+                <option selected disabled><i class="bi bi-plus"></i>Grade</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <option value="4">Grade 4</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+
+            </select>
             
+            
+            <div class="d-flex flex-column w-100">
+                <label>Roll No</label>
+                <input type="number" min="1" class="form-control">
+            </div>
+           
+            <div class="d-flex justify-content-between w-100">
+                <button class="btn btn-primary" onclick="handleClose()">Submit</button>
+                <button class="btn btn-outline-primary" onclick="handleClose()">Close</button>
+            </div>
         </form>
     </div>
 
