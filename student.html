@@ -52,7 +52,7 @@
                 </div>
             </form>
                 <!-- Button -->
-            <button class="btn text-white fw-semibold btn-primary ">
+            <button class="btn text-white fw-semibold btn-primary" onclick="handleAdd()">
                 + Add New Student
             </button>
             </div>
@@ -125,6 +125,32 @@
         </div>
     </div>
 </div>
+
+<!--Modal-->
+    <div class="d-none position-absolute justify-content-center align-items-center modalbg w-100 h-100 " id="modal">
+
+        <form
+            class="position-absolute d-flex flex-column gap-3 align-items-center justify-content-center p-3 bg-white shadow-sm">
+            <legend>Add New Students</legend>
+            
+        </form>
+    </div>
+
+    <script>
+        function handleAdd() {
+            const modal = document.getElementById("modal");
+
+            modal.classList.remove("d-none")
+            modal.classList.add("d-flex")
+        }
+
+        function handleClose() {
+            const modal = document.getElementById("modal");
+
+            modal.classList.remove("d-flex")
+            modal.classList.add("d-none")
+        }
+    </script>
                         
 
 
