@@ -40,28 +40,10 @@
 
     <div class="main flex-grow-1 p-5 py-2">
 
-        <!--Search Bar and Profile-->
-        <div class="d-flex align-items-center">
-            <!--Search Bar-->
-            <form class="d-flex mt-3 px-3 w-100" role="search">
-                <div class="input-group">
-                    <span class="input-group-text" id="search-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
-                </div>
-            </form>
-            <!--Profile-->
-            <div class="d-flex justify-content-between align-items-center gap-4 mt-3 px-3">
-                <i class="bi bi-bell fs-5"></i>
-                <i class="bi bi-person-circle fs-3"></i>
-            </div>
-        </div>
-
         <!--Dashboard-->
         <div class="mt-3 p-2">
             <h1 class="fw-bold mb-2">Dashboard</h1>
-            <p>Welcome back Admin, here is your overview. </p>
+            <p>Welcome back Student, here is your overview. </p>
 
             <!--Stat cards-->
             <div class="d-flex justify-content-between">
@@ -69,9 +51,7 @@
                 <div class="card w-25">
                     <div class="card-body">
                         <h6 class="card-title fw-bold">Total Paid</h6>
-                        <h5 class="card-text fw-bold">Nrs. 15,000</h5>
-                        <p class="card-text fw-bold text-success"><i class="bi bi-graph-up-arrow"></i> 10% vs last
-                            month</p>
+                        <h5 class="card-text text-success fw-bold">Nrs. 15,000</h5>
                     </div>
                 </div>
 
@@ -79,9 +59,7 @@
                 <div class="card w-25">
                     <div class="card-body">
                         <h6 class="card-title fw-bold">Pending</h6>
-                        <h5 class="card-text fw-bold">Nrs. 24,000</h5>
-                        <p class="card-text fw-bold text-success"><i class="bi bi-graph-up-arrow"></i> 0% vs last
-                            month</p>
+                        <h5 class="card-text text-warning fw-bold">Nrs. 4,000</h5>
                     </div>
                 </div>
 
@@ -90,9 +68,7 @@
                 <div class="card w-25">
                     <div class="card-body">
                         <h6 class="card-title fw-bold">OverDue</h6>
-                        <h5 class="card-text fw-bold">Nrs. 12,000</h5>
-                        <p class="card-text fw-bold text-danger"><i class="bi bi-graph-down-arrow"></i> 10% vs last
-                            month</p>
+                        <h5 class="card-text text-danger fw-bold">Nrs. 12,000</h5>
                     </div>
                 </div>
             </div>
@@ -104,7 +80,7 @@
                         <thead class="table-secondary">
                             <tr>
                                 <th>Date</th>
-                                <th>Student</th>
+                                <th>Category</th>
                                 <th>Fee Status</th>
                                 <th>Amount</th>
                             </tr>
@@ -112,27 +88,27 @@
                         <tbody>
                             <tr>
                                 <td>Nov 3rd, 2025</td>
-                                <td>Student1</td>
-                                <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                                <td>Nrs. 2000</td>
+                                <td>Tuition Fee</td>
+                                <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Overdue</span></td>
+                                <td>Nrs. 6000</td>
                             </tr>
                             <tr>
                                 <td>Nov 1st, 2025</td>
-                                <td>Student2</td>
+                                <td>Lab Fee</td>
                                 <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Overdue</span></td>
-                                <td>Nrs. 1000</td>
+                                <td>Nrs. 6000</td>
                             </tr>
                             <tr>
                                 <td>Oct 20th, 2025</td>
-                                <td>Student 3</td>
+                                <td>Transportation Fee</td>
                                 <td><span class="badge text-warning bg-warning-subtle rounded-pill px-3 py-2">Pending</span></td>
                                 <td>Nrs. 4000</td>
                             </tr>
                             <tr>
                                 <td>Oct 19th, 2025</td>
-                                <td>Student 4</td>
+                                <td>Tuition Fee</td>
                                 <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                                <td>Nrs. 22000</td>
+                                <td>Nrs. 15000</td>
                             </tr>
                         </tbody>
                     </table>
