@@ -1,9 +1,10 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payments</title>
-     <!--Global CSS-->
+    <!--Global CSS-->
     <link rel="stylesheet" type="text/css" href="globalstyles.css">
 
     <!--Bootstrap-->
@@ -13,8 +14,9 @@
     <!--Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body class="d-flex">
-     <!--Navbar-->
+    <!--Navbar-->
     <nav class="navbar-nav text-white p-2 justify-content-between">
         <div>
             <div class="d-flex justify-content-between align-items-center my-2">
@@ -25,6 +27,7 @@
 
             <a class="nav-link px-2" href="dashboard.html">Dashboard</a>
             <a class="nav-link px-2" href="student.html">Students</a>
+            <a class="nav-link px-2" href="accounts.html">Accounts</a>
             <a class="nav-link px-2" href="payment.html">Payments</a>
             <a class="nav-link px-2" href="feestructure.html">Fee Structure</a>
             <a class="nav-link px-2" href="reports.html">Reports</a>
@@ -36,7 +39,7 @@
         </div>
     </nav>
 
-    <div class="flex-grow-1 p-2">
+    <div class="main flex-grow-1 p-2">
         <!--Main-->
         <div class="mt-0 p-2">
             <h1>Payment Management</h1>
@@ -68,7 +71,7 @@
                         <h5 class="card-text fw-bold">12</h5>
                     </div>
                 </div>
-                 <!--Pending Approval-->
+                <!--Pending Approval-->
 
                 <div class="card flex-grow-1">
                     <div class="card-body">
@@ -77,101 +80,109 @@
                     </div>
                 </div>
             </div>
-           
+
 
             <div class="d-flex justify-content-between align-items-center mb-3">
-                 <!--Search Bar-->
-            <form class="d-flex mt-3 px-3 w-50" role="search">
-                <div class="input-group">
-                    <span class="input-group-text" id="search-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Search by name or email" aria-label="Search by name or email">
-                </div>
-            </form>
+                <!--Search Bar-->
+                <form class="d-flex mt-3 px-3 w-50" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text" id="search-icon">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search by name or email"
+                            aria-label="Search by name or email">
+                    </div>
+                </form>
                 <!-- Button -->
-            <button class="btn text-white fw-semibold btn-primary ">
-                 Add Payment
-            </button>
+                <button class="btn text-white fw-semibold btn-primary ">
+                    Add Payment
+                </button>
             </div>
 
             <!-- Table -->
             <div class="table-responsive bg-white rounded shadow-sm">
-            <table class="table align-middle mb-0">
-                <thead class="table-secondary">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Amount</th>
-                    <th>Date</th>
+                <table class="table align-middle mb-0">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Date</th>
 
-                </tr>
-                </thead>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                <tr>
-                    <td>Ashok Shrestha</td>
-                    <td>ashok@gmail.com</td>
-                    <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                    <td>50,000</td>
-                    <td>Sep 9,2025</td>
+                    <tbody>
+                        <tr>
+                            <td>Ashok Shrestha</td>
+                            <td>ashok@gmail.com</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                            </td>
+                            <td>50,000</td>
+                            <td>Sep 9,2025</td>
 
-                    </tr>
+                        </tr>
 
-                <tr>
-                    <td>Akash Sharma</td>
-                    <td>akash@gmail.com</td>
-                    <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Unpaid</span></td>
-                    <td>38,000</td>
-                    <td>Sep 11,2025</td>
+                        <tr>
+                            <td>Akash Sharma</td>
+                            <td>akash@gmail.com</td>
+                            <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Unpaid</span>
+                            </td>
+                            <td>38,000</td>
+                            <td>Sep 11,2025</td>
 
-                </tr>
+                        </tr>
 
-                <tr>
-                    <td>Anjali Shrestha</td>
-                    <td>anjali@gmail.com</td>
-                    <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                    <td>42,000</td>
-                    <td>Sep 12,2025</td>
+                        <tr>
+                            <td>Anjali Shrestha</td>
+                            <td>anjali@gmail.com</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                            </td>
+                            <td>42,000</td>
+                            <td>Sep 12,2025</td>
 
-                </tr>
+                        </tr>
 
-                <tr>
-                    <td>Bishal Thapa</td>
-                    <td>bishal@gmail.com</td>
-                    <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Unpaid</span></td>
-                    <td>68,000</td>
-                    <td>Sep 15,2025</td>
+                        <tr>
+                            <td>Bishal Thapa</td>
+                            <td>bishal@gmail.com</td>
+                            <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Unpaid</span>
+                            </td>
+                            <td>68,000</td>
+                            <td>Sep 15,2025</td>
 
-                </tr>
+                        </tr>
 
-                <tr>
-                    <td>Bikash Koirala</td>
-                    <td>bikash@gmail.com</td>
-                    <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                    <td>21,000</td>
-                    <td>Sep 17,2025</td>                 
-                </tr>
+                        <tr>
+                            <td>Bikash Koirala</td>
+                            <td>bikash@gmail.com</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                            </td>
+                            <td>21,000</td>
+                            <td>Sep 17,2025</td>
+                        </tr>
 
-                <tr>
-                    <td>Suhani Maharjan</td>
-                    <td>suhani@gmail.com</td>
-                    <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                    <td>56,000</td>
-                    <td>Sep 19,2025</td>                   
-                </tr>
+                        <tr>
+                            <td>Suhani Maharjan</td>
+                            <td>suhani@gmail.com</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                            </td>
+                            <td>56,000</td>
+                            <td>Sep 19,2025</td>
+                        </tr>
 
-                <tr>
-                    <td>Suresh Maharjan</td>
-                    <td>suresh@gmail.com</td>
-                    <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                    <td>26,000</td>
-                    <td>Sep 21,2025</td>                   
-                </tr>
-                </tbody>
+                        <tr>
+                            <td>Suresh Maharjan</td>
+                            <td>suresh@gmail.com</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                            </td>
+                            <td>26,000</td>
+                            <td>Sep 21,2025</td>
+                        </tr>
+                    </tbody>
 
-            </table>
+                </table>
             </div>
         </div>
     </div>
@@ -180,6 +191,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    
+
 </body>
+
 </html>
