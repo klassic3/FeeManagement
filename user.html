@@ -1,0 +1,265 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <!--Global CSS-->
+    <link rel="stylesheet" type="text/css" href="globalstyles.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="d-flex">
+    <!--Navbar-->
+    <nav class="navbar-nav text-white p-2 justify-content-between">
+        <div>
+            <div class="d-flex justify-content-between align-items-center my-2">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F023%2F654%2F784%2Fnon_2x%2Fgolden-logo-template-free-png.png&f=1&nofb=1&ipt=7f8e179d408f1db75e7f58565089752906c8292242184a9ffe74e85956129fcd"
+                    alt="Logo" width="20%">
+                <h3 class="fs-6">Aster Academy</h3>
+            </div>
+
+            <a class="nav-link px-2" href="dashboard.html">Dashboard</a>
+            <a class="nav-link px-2" href="user.html">Users</a>
+            <a class="nav-link px-2" href="payment.html">Payments</a>
+            <a class="nav-link px-2" href="feestructure.html">Fee Structure</a>
+            <a class="nav-link px-2" href="reports.html">Reports</a>
+        </div>
+
+        <div>
+            <a class="nav-link px-2" href="settings.html">Settings</a>
+            <a class="nav-link px-2" href="login.html">Log Out</a>
+        </div>
+    </nav>
+
+    <div class="main flex-grow-1 p-2">
+        <!-- Main Content -->
+        <div class="flex-grow-1 p-5">
+            <h1 class="fw-bold mb-4">User Management</h1>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <!--Search Bar-->
+                <form class="d-flex mt-3 px-3 w-50" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text" id="search-icon">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search Users" aria-label="Search Users">
+                    </div>
+                </form>
+
+                <div class=" d-flex gap-2 align-items-center w-25">
+                    <label class=" fs-5 ">Filter</label>
+                    <select class="form-select" id="filterUsers">
+                        <option value="all" selected>All</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <!-- Button -->
+                <button class="btn text-white fw-semibold btn-primary" onclick="handleAdd()">
+                    + Register New User
+                </button>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive bg-white rounded shadow-sm">
+                <table class="table align-middle mb-0">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade/Role</th>
+                            <th>Roll No.</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Ashok Shrestha</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Akash Sharma</td>
+                            <td>Accountant</td>
+                            <td>-</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Anjali Shrestha</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Bishal Thapa</td>
+                            <td>Accountant</td>
+                            <td>-</td>
+                            <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Inactive</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-repeat"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Bikash Koirala</td>
+                            <td>2</td>
+                            <td>21</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Suhani Maharjan</td>
+                            <td>1</td>
+                            <td>18</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Suresh Maharjan</td>
+                            <td>1</td>
+                            <td>25</td>
+                            <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Active</span>
+                            </td>
+                            <td>
+                                <button class="border border-0 bg-white fs-6">
+                                    <i class="bi bi-pencil-square"></i></button>
+                                <button class="border border-0 bg-white fs-6"><i class="bi bi-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Modal-->
+    <div class="d-none position-absolute justify-content-center align-items-center modalbg w-100 h-100 " id="modal">
+
+        <form
+            class="position-absolute d-flex flex-column gap-3 align-items-center justify-content-center p-3 bg-white shadow-sm w-50">
+            <legend>Add New Students</legend>
+            <div class="d-flex flex-column w-100">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Enter Full Name">
+            </div>
+            <div class="d-flex flex-column w-100">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="d-flex flex-column w-100">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <div class="d-flex flex-column w-100">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <div class="d-flex flex-column w-100">
+                <label>Grade/Role</label>
+                <select class="form-select rounded w-100">
+                    <option selected disabled><i class="bi bi-plus"></i>Select Grade/Role</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+
+                </select>
+
+            </div>
+
+            <div class="d-flex flex-column w-100">
+                <label>Roll No</label>
+                <input type="number" min="1" class="form-control">
+            </div>
+
+            <div class="d-flex justify-content-between w-100">
+                <button class="btn btn-primary" onclick="handleClose()">Submit</button>
+                <button class="btn btn-outline-primary" onclick="handleClose()">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleAdd() {
+            const modal = document.getElementById("modal");
+
+            modal.classList.remove("d-none")
+            modal.classList.add("d-flex")
+        }
+
+        function handleClose() {
+            const modal = document.getElementById("modal");
+
+            modal.classList.remove("d-flex")
+            modal.classList.add("d-none")
+        }
+    </script>
+
+
+
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
