@@ -12,6 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!--Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!--Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -41,25 +44,6 @@
     </nav>
 
     <div class="main flex-grow-1 p-5 py-2">
-
-        <!--Search Bar and Profile-->
-        <div class="d-flex align-items-center">
-            <!--Search Bar-->
-            <form class="d-flex mt-3 px-3 w-100" role="search">
-                <div class="input-group">
-                    <span class="input-group-text" id="search-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
-                </div>
-            </form>
-            <!--Profile-->
-            <div class="d-flex justify-content-between align-items-center gap-4 mt-3 px-3">
-                <i class="bi bi-bell fs-5"></i>
-                <i class="bi bi-person-circle fs-3"></i>
-            </div>
-        </div>
-
         <!--Dashboard-->
         <div class="mt-3 p-2">
             <h1 class="fw-bold mb-2">Dashboard</h1>
@@ -99,51 +83,183 @@
                 </div>
             </div>
 
-            <div class="mt-3">
-                <h3>Alerts</h3>
-                <div class="table-responsive bg-white rounded shadow-sm">
-                    <table class="table align-middle mb-0">
-                        <thead class="table-secondary">
-                            <tr>
-                                <th>Date</th>
-                                <th>Student</th>
-                                <th>Fee Status</th>
-                                <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Nov 3rd, 2025</td>
-                                <td>Student1</td>
-                                <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                                <td>Nrs. 2000</td>
-                            </tr>
-                            <tr>
-                                <td>Nov 1st, 2025</td>
-                                <td>Student2</td>
-                                <td><span class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Overdue</span></td>
-                                <td>Nrs. 1000</td>
-                            </tr>
-                            <tr>
-                                <td>Oct 20th, 2025</td>
-                                <td>Student 3</td>
-                                <td><span class="badge text-warning bg-warning-subtle rounded-pill px-3 py-2">Pending</span></td>
-                                <td>Nrs. 4000</td>
-                            </tr>
-                            <tr>
-                                <td>Oct 19th, 2025</td>
-                                <td>Student 4</td>
-                                <td><span class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span></td>
-                                <td>Nrs. 22000</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="d-flex gap-3 mt-3">
+                <div class="card w-50 mb-4 draggable">
+                    <div class="card-header pb-0 d-flex align-items-center">
+                        <div>
+                            <h6 class="mb-1">Payments overview</h6>
+                            <p class="text-sm mb-0">
+                                (+12%) more in 2025
+                            </p>
+                        </div>
+                        <select class="form-select form-select-sm ms-auto w-25 font-weight-bolder bg-gray-100"
+                            aria-label=".form-select-sm example">
+                            <option selected>2025</option>
+                            <option value="2020">2024</option>
+                        </select>
+                    </div>
+                    <div class="card-body p-3">
+                        <div class="chart">
+                            <canvas class="chart-line" class="chart-canvas" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-2 w-50">
+                    <h3>Alerts</h3>
+                    <div class="table-responsive bg-white rounded shadow-sm">
+                        <table class="table align-middle mb-0">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Student</th>
+                                    <th>Fee Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nov 3rd, 2025</td>
+                                    <td>Student1</td>
+                                    <td><span
+                                            class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                                    </td>
+                                    <td>Nrs. 2000</td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 1st, 2025</td>
+                                    <td>Student2</td>
+                                    <td><span
+                                            class="badge text-danger bg-danger-subtle rounded-pill px-3 py-2">Overdue</span>
+                                    </td>
+                                    <td>Nrs. 1000</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 20th, 2025</td>
+                                    <td>Student 3</td>
+                                    <td><span
+                                            class="badge text-warning bg-warning-subtle rounded-pill px-3 py-2">Pending</span>
+                                    </td>
+                                    <td>Nrs. 4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 19th, 2025</td>
+                                    <td>Student 4</td>
+                                    <td><span
+                                            class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                                    </td>
+                                    <td>Nrs. 22000</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 19th, 2025</td>
+                                    <td>Student 5</td>
+                                    <td><span
+                                            class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                                    </td>
+                                    <td>Nrs. 5000</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 19th, 2025</td>
+                                    <td>Student 5</td>
+                                    <td><span
+                                            class="badge text-success bg-success-subtle rounded-pill px-3 py-2">Paid</span>
+                                    </td>
+                                    <td>Nrs. 8000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
         </div>
 
     </div>
+
+    <!--Chart-->
+    <script>
+        var ctx2 = document.querySelectorAll(".chart-line");
+
+        new Chart(ctx2[ctx2.length - 1], {
+            type: "line",
+            data: {
+                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Timely Payments",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    pointRadius: 0,
+                    borderColor: "#00ab55",
+                    borderWidth: 3,
+                    backgroundColor: "transparent",
+                    data: [20000, 60000, 20000, 50000, 90000, 220000, 440000, 380000, 500000],
+                    maxBarThickness: 6
+                },
+                {
+                    label: "Delayed Payment",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    pointRadius: 0,
+                    borderColor: "#ff0000",
+                    borderWidth: 3,
+                    backgroundColor: "transparent",
+                    data: [30000, 90000, 40000, 140000, 290000, 290000, 240000, 270000, 230000],
+                    maxBarThickness: 6
+                },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    enabled: true,
+                    mode: "index",
+                    intersect: false,
+                },
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            borderDash: [2],
+                            borderDashOffset: [2],
+                            color: '#dee2e6',
+                            zeroLineColor: '#dee2e6',
+                            zeroLineWidth: 1,
+                            zeroLineBorderDash: [2],
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 10,
+                            fontSize: 11,
+                            fontColor: '#adb5bd',
+                            lineHeight: 3,
+                            fontStyle: 'normal',
+                            fontFamily: "Public Sans",
+                        },
+                    },],
+                    xAxes: [{
+                        gridLines: {
+                            zeroLineColor: 'rgba(0,0,0,0)',
+                            display: false,
+                        },
+                        ticks: {
+                            padding: 10,
+                            fontSize: 11,
+                            fontColor: '#adb5bd',
+                            lineHeight: 3,
+                            fontStyle: 'normal',
+                            fontFamily: "Public Sans",
+                        },
+                    },],
+                },
+            },
+        });
+    </script>
+
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
